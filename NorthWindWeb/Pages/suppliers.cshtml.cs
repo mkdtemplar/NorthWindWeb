@@ -16,10 +16,11 @@ namespace NorthWindWeb.Pages
         }
         public IEnumerable<string> Suppliers { get; set; }
         
-        public void OnGet()
+        public IActionResult OnGet()
         {
             ViewData["Title"] = "Northwind Website - Suppliers";
             Suppliers = db.Suppliers.Select(s => s.CompanyName);
+            return Page();
         }
         
         [BindProperty]

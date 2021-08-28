@@ -1,4 +1,5 @@
 ﻿@page
+@using Microsoft.EntityFrameworkCore
 @model NorthWindWeb.Pages.index
 
 @functions
@@ -23,17 +24,18 @@
 </head>
 <body>
 
-    <div class="jumbotron">
-        <h1 class="display-3">Welcome to Northwind</h1>
-        <p class="lead">We supplay products to our customers.</p>
-        <hr/>
-        <p>It's @Model.DayName! Our customers include restaurants, hotels, and cruise lines.</p>
-        <p>
-            <a class="btn btn-primary" href="suppliers">Learn more about our suppliers</a>
-            <a class="btn btn-primary" href="emplyees.cshtml">Contact our employess</a>
-        </p>
+<div class="jumbotron">
+    <h1 class="display-3">Welcome to Northwind</h1>
+    <p class="lead">We supplay products to our customers.</p>
+    <hr/>
+    <p>It's @Model.DayName! Our customers include restaurants, hotels, and cruise lines.</p>
+    <p>
+        <a class="btn btn-primary" href="suppliers">Learn more about our suppliers</a>
+        <a class="btn btn-primary" href="NorthwindEmployees/Pages/emplyees.cshtml">Contact our employess</a>
+        <a class="btn btn-primary" href="customers">List of customers</a>
+    </p>
         
-    </div>
+</div>
 
 </body>
 </html>
